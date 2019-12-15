@@ -9,30 +9,39 @@ import PropTypes from 'prop-types';
 
 export class Product extends Component {
     render() {
-        const{id, title, img, price, inCart} = this.props.product;
+        const { id, title, img, price, inCart } = this.props.product;
         return (
             <ProductWrapper className="col-9 mx-auto col-md-6 col-lg-3 my-3" >
                 <div className="card">
-                    <div className="img-container p-5 " onClick={()=>console.log('u clicked me on the img cont')
-                    }>
-                        <Link to="/details">
-                            <img src={img} alt="product" className="card-img-top"/>
-                            {/*img-fluid max-width: 100% height: auto*/}
-                        </Link>
-                        <button
-                            className="cart-btn"
-                            // the same like (inCart ? true : false)
-                            disabled={ !!inCart }
-                            onClick={()=>{
-                                console.log('added to the cart');
-                            }}>
-                        {inCart ? (<p className="text-capitalize mb-0" disabled>
-                                {""}
-                                in cart
-                        </p>
-                        ):(<FontAwesomeIcon icon={faCartPlus} />)}
-                        </button>
-                    </div>
+                    <ProductConsumer>
+                        {value=>(
+                            <div
+                                className="img-container p-5 "
+                                 onClick={()=>
+                                     value.handleDetail(id)}
+                            >
+                                <Link to="/details">
+                                    <img src={img} alt="product" className="card-img-top"/>
+                                    {/*img-fluid max-width: 100% height: auto*/}
+                                </Link>
+                                <button
+                                    className="cart-btn"
+                                    // the same like (inCart ? true : false)
+                                    disabled={ !!inCart }
+                                    onClick={()=>{
+                                        value.addToCart(id);
+                                        value.openModal(id);
+                                    }}>
+                                    {inCart ? (<p className="text-capitalize mb-0" disabled>
+                                            {""}
+                                            in cart
+                                        </p>
+                                    ):(<FontAwesomeIcon icon={faCartPlus} />)}
+                                </button>
+                            </div>
+                        )}
+
+                    </ProductConsumer>
                     {/* card footer*/}
                     <div className="card-footer d-flex justify-content-between">
                         <p className="align-self-center mb-0">

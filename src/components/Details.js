@@ -50,16 +50,23 @@ export class Details extends Component {
                                    </p>
                                    <p className="text-muted lead">{info}</p>
                                    {/*buttons*/}
-                               </div>
+                                   <div>
                                    <Link to='/'>
-                                       <ButtonContainer>
-                                           back to products
-                                       </ButtonContainer>
+                                       <ButtonContainer>back to products</ButtonContainer>
                                    </Link>
-                               <ButtonContainer disable={inCart ? true: false}>
+                               <ButtonContainer
+                                   cart
+                                   disable={inCart ? true : false}
+                                   onClick={()=>{
+                                       value.addToCart(id);
+                                       value.openModal(id);
+                                   }}
+                               >
                                    {inCart ? "inCart" : "add to cart"}
                                </ButtonContainer>
-                              </div>
+                                   </div>
+                                 </div>
+                           </div>
                        </div>
                    );
                 }}
