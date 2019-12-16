@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { ProductConsumer } from "../Context";
 import { Link } from "react-router-dom";
-import {ButtonContainer} from "./Button";
+import { ButtonContainer } from "./Button";
 
 
 
@@ -9,8 +9,8 @@ export class Details extends Component {
     render() {
         return (
             <ProductConsumer>
-                {(value)=>{
-                   const{
+                {value=>{
+                    const{
                        id,
                        company,
                        img,
