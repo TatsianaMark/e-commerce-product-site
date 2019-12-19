@@ -1,54 +1,69 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
-import logo from '../logo.svg'
+import logo from '../logoEco.png';
 import {faCartPlus} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {ButtonContainer} from "./Button";
-import styled from 'styled-components';
-
-
-
-
+// import styled from 'styled-components';
+import {FaBars} from "react-icons/fa";
 
 
 export class Navbar extends Component {
+    state = {
+        isOpen: false
+
+    };
+    handleToggle = () => {
+        this.setState({isOpen: !this.state.isOpen});
+    }
+
     render() {
-        return (
-            <NavWrapper className=" navbar navbar-expand-sm  navbar-dark px-sm-5">
-                {/*}
-https://www.iconfinder.com/icons/1243689/call_phone_icon
-Creative Commons (Attribution 3.0 Unported);
-https://www.iconfinder.com/Makoto_msk */}
-<Link to='/'>
-    <img src={logo} alt="store" className="navbar-brand"/>
-</Link>
-                <ul className="navbar-nav align-items-center">
-                    <li className="nav-item ml-5">
+        return <nav className="navbar">
+            <div className="nav-center">
+                <div className="nav-header">
+                    <Link to='/'>
+                        <img src={logo} alt="OpenEcoBel"/>
+                    </Link>
+                    <button type="button" className="nav-btn" onClick={this.handleToggle}>
+                        <FaBars className='nav-icon'/>
+                    </button>
+                </div>
+                <ul className={this.state.isOpen ? "nav-links show-nav" : "nav-links"}>
+                    <li>
                         <Link to="/" className="nav-link">
                             product
                         </Link>
                     </li>
+                    <li>
+                        <Link to="/tours" className="nav-link">
+                            tours
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/hotels" className="nav-link">
+                            hotels
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/blog" className="nav-link">
+                            blog
+                        </Link>
+                    </li>
+                    <li>
+                        <Link to="/events" className="nav-link">
+                            events
+                        </Link>
+                    </li>
                 </ul>
-                <Link to="/cart" className="ml-auto">
+                <Link to="/cart" className="ml-5">
                     <ButtonContainer>
                         <span className="mr-2">
-                            <FontAwesomeIcon icon={faCartPlus} />
+                            <FontAwesomeIcon icon={faCartPlus}/>
                         </span>
-
                         my cart
                     </ButtonContainer>
                 </Link>
-            </NavWrapper>
-        );
+            </div>
+        </nav>
     }
 }
-const NavWrapper = styled.nav`
-background:var(--mainGreen);
-.nav-link{
-color:var(--mainWhite)!important;
-font-size:1.3rem;
-text-transform: capitalize !important;
-}
-`;
-
-

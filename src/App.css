@@ -4,6 +4,9 @@
   --mainWhite:#f3f3f3;
   --mainDark:#232528;
   --mainYellow:#ffa400;
+  --mainGray:#2e2929;
+  --mainNavLink:#ebe4e4;
+
 }
 body{
   font-family: "Oswald", sans-serif !important;

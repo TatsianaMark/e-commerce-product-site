@@ -9,12 +9,11 @@ import {Product} from "./Product";
 export  class ProductList extends Component{
     render(){
         return (
-           <React.Fragment>
+           <>
                <div className="py-5">
                    <div className="container">
                         <Title name = "our " title="products"/>
-
-                       <div className="row">
+                        <div className="row">
                            <ProductConsumer>
                                {value=>{
                                  return value.products.map( product =>{
@@ -25,8 +24,7 @@ export  class ProductList extends Component{
                        </div>
                    </div>
                </div>
-           </React.Fragment>
-            //
+           </>
         );
     }
 }

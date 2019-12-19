@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import PropTypes from 'prop-types';
 
 
-export class Product extends Component {
+export  class Product extends Component {
     render() {
         const { id, title, img, price, inCart } = this.props.product;
         return (
