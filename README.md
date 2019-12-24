@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Click link: https://e-commerce-own-project-react.netlify.com
+Click link: https://react-e-commerce-own-project.netlify.com
 
 Link only products-store: https://react-e-commerce-eco-products-store.netlify.com
  
