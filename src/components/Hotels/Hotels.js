@@ -2,7 +2,7 @@ import React from 'react';
 import Hero from "./Hero";
 import {Banner} from "../Banner";
 import {Link} from "react-router-dom";
-import {Services} from "./Services";
+import Services from "./Services";
 
 
 export default function () {
@@ -15,7 +15,7 @@ export default function () {
             </Link>
         </Banner>
         </Hero>
-            <Services/>
+           <Services/>
         </>
     );
 

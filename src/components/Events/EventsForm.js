@@ -10,7 +10,7 @@ export class EventsForm extends React.PureComponent {
         return (
             <div className="bg_events_forms">
                 <div className="bg_events_forms_content">
-                    <h2>Events in Belarus</h2>
+                    <div className="Events-text py-5"><h2>Events in Belarus</h2></div>
                 </div>
                     <form action="/" method="GET" className="event-search">
                         <div className="field">

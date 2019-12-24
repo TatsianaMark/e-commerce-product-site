@@ -31,7 +31,7 @@ const Positions = [
         value:'Mogilev',
         title:'Mogilev region',
     }  ,
-]
+];
 
 class Form extends Component{
 
@@ -42,7 +42,7 @@ class Form extends Component{
             name:'',
             number:'',
         }
-    }
+    };
 
     handleInputChange = ({ target: {value}})=>{
         this.setState({
@@ -74,7 +74,7 @@ class Form extends Component{
             }
 
         })
-    }
+    };
 
 
     render(){

@@ -14,7 +14,6 @@
     background: #e9e9e9;
     width: 95%;
     margin-top: 11px;
-    border: 1px red solid;
     margin-left: auto;
     margin-right: auto;
     border-radius: 5px;
@@ -37,7 +36,6 @@
     /*right: 13px;*/
 /*}*/
 .field{
-    border: 1px red solid;
     width: 286px;
     height: 54px;
     margin: 20px;

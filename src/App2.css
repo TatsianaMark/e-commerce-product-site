@@ -261,6 +261,7 @@ h6 {
 }
 .services h6 {
   letter-spacing: var(--mainSpacing);
+  text-transform: capitalize;
 }
 .services p {
   width: 80%;
@@ -547,4 +548,39 @@ h6 {
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--mainYellow);
+}
+.blog-png{
+  opacity: 20%;
+  width: 100%;
+  height: 300px;
+}
+.feature-img img{
+  width: 100%;
+
+}
+.price{
+  width:50px ;
+  height: 50px;
+  background: #32CD32;
+  color: #fff;
+  font-weight: 600;
+  border-radius:50%;
+  padding: 10px;
+  position: absolute;
+  left: 20px;
+  bottom: -20px;
+
+
+}
+.feature-img{
+  position: relative;
+
+}
+.rating{
+  padding: 3px;
+  float:right;
+  background: #fff;
+  bottom: -1px;
+  right:0;
+  position: absolute;
 }
