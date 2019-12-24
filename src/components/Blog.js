@@ -6,7 +6,7 @@ export class Blog extends React.PureComponent {
     render() {
         return (
             <div className="blog_page">
-                <img src={blog} alt="blog" className="blog-png">
+                <img src={blog} alt="blog" className="blog-png ">
                 </img>
                     <div className=" mx-auto " >
                     <div className="container py-3">
